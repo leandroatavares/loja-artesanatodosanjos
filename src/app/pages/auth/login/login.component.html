@@ -1,0 +1,29 @@
+<section id="login">
+  <mat-card>
+    <img src="https://place-hold.it/500x300" alt="" />
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="fill">
+        <mat-label>e-mail</mat-label>
+        <input
+          matInput
+          placeholder="exemplo@email.com"
+          formControlName="email"
+          required
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>senha</mat-label>
+        <input matInput formControlName="password" required />
+      </mat-form-field>
+
+      <button mat-flat-button color="primary" (click)="login()">
+        Cadastrar
+      </button>
+    </form>
+
+    <div class="providers-signins">
+      <button mat-flat-button (click)="googleSignin()">Google</button>
+    </div>
+  </mat-card>
+</section>

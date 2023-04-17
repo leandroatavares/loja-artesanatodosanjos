@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "loja-artesanatodosanjos": {
+      "hosting": {
+        "loja-artesanatodosanjos": [
+          "loja-artesanatodosanjos"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "loja-artesanatodosanjos"
+  }
+}

@@ -1,0 +1,9 @@
+<header>
+  <img class="logo" src="https://place-hold.it/500x300" alt="logo" />
+
+  <nav class="nav-right">
+    <a [routerLink]="['/auth/signin']">cadastrar</a>
+    <a [routerLink]="['/auth/login']">entrar</a>
+    <button (click)="logout()">logout</button>
+  </nav>
+</header>
