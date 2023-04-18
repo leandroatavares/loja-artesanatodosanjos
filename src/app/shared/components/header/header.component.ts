@@ -12,4 +12,8 @@ export class HeaderComponent {
   logout() {
     this.authService.logout();
   }
+
+  isLogged() {
+    return this.authService.getCurrentUser();
+  }
 }
