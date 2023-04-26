@@ -5,6 +5,7 @@ import {
   redirectUnauthorizedTo,
 } from '@angular/fire/auth-guard';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateNewFunkoComponent } from './pages/create-new-funko/create-new-funko.component';
 import { HomeComponent } from './pages/home/home.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
@@ -13,6 +14,7 @@ const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'novo-personalizado', component: CreateNewFunkoComponent },
   {
     path: 'auth',
     loadChildren: () =>

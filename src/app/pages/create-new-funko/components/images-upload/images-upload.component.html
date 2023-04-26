@@ -1,0 +1,17 @@
+<div class="upload">
+  <ngx-dropzone class="dropzone" (change)="onSelect($event)">
+    <ngx-dropzone-label>Clique ou arraste para aqui</ngx-dropzone-label>
+    <ngx-dropzone-image-preview
+      *ngFor="let file of files"
+      ngProjectAs="ngx-dropzone-preview"
+      [removable]="true"
+      (removed)="onRemove(file)"
+      [file]="file"
+    >
+    </ngx-dropzone-image-preview>
+  </ngx-dropzone>
+
+  <button (click)="uploadImages()" mat-raised-button>
+    solicitar meu boneco personalizado
+  </button>
+</div>

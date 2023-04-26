@@ -26,6 +26,7 @@ export const environment = {
      authDomain: 'loja-artesanatodosanjos.firebaseapp.com',
      messagingSenderId: '${process.env['MESSAGING_SENDER_ID']}',
      measurementId: '${process.env['MEASUREMENT_ID']}',
+     storageBucket: 'loja-artesanatodosanjos'
    }
 };
 `;
