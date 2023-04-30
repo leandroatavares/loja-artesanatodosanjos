@@ -12,11 +12,26 @@ header {
   .logo {
     height: 100%;
   }
-
 }
+
+
 
 .nav-right {
   display: flex;
+
+  &__cart {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .cart-icon {
+      color: #fff;
+    }
+  }
+
+  &__user {
+
+  }
 
   a {
     color: var(--white);

@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { CreateNewFunkoModule } from './pages/create-new-funko/create-new-funko.module';
 import { HomeModule } from './pages/home/home.module';
 import { SharedModule } from './shared/shared.module';
+import { cartReducer } from './store/cart/cart.reducer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +36,9 @@ import { SharedModule } from './shared/shared.module';
     provideDatabase(() => getDatabase()),
     provideStorage(() => getStorage()),
     BrowserAnimationsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({
+      cart: cartReducer,
+    }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [ScreenTrackingService, UserTrackingService],

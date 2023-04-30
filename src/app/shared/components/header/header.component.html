@@ -7,8 +7,20 @@
   </nav>
 
   <ng-template #loggedNav>
-    <nav>
-      <button (click)="logout()">logout</button>
+    <nav class="nav-right">
+      <!-- <button (click)="logout()">logout</button> -->
+
+      <div class="nav-right__cart">
+        <mat-icon
+          class="cart-icon"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="shopping_cart"
+        ></mat-icon>
+        {{ (cartItems$ | async)?.length }}
+      </div>
+
+      <div class="nav-right__user"></div>
     </nav>
   </ng-template>
 </header>

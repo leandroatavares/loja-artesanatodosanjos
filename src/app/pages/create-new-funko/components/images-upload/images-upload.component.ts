@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { ImagesService } from '../../../../shared/services/images.service';
+import { addItem } from '../../../../store/cart/cart.actions';
 
 @Component({
   selector: 'app-images-upload',
@@ -8,7 +10,7 @@ import { ImagesService } from '../../../../shared/services/images.service';
 })
 export class ImagesUploadComponent {
   files: File[] = [];
-  constructor(private imageService: ImagesService) {}
+  constructor(private imageService: ImagesService, private store: Store) {}
 
   onSelect(event: any) {
     console.log(event);
@@ -22,7 +24,14 @@ export class ImagesUploadComponent {
     this.files.splice(this.files.indexOf(event), 1);
   }
 
-  uploadImages() {
-    this.imageService.uploadImage(this.files);
+  addProductToCart() {
+    console.log(this.files);
+    const item = {
+      name: 'boneco personalizado',
+      images: this.files,
+      price: 69.9,
+    };
+
+    this.store.dispatch(addItem({ item }));
   }
 }
