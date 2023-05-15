@@ -21,9 +21,10 @@ import { CreateNewFunkoModule } from './pages/create-new-funko/create-new-funko.
 import { HomeModule } from './pages/home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { cartReducer } from './store/cart/cart.reducer';
+import { CartCheckoutComponent } from './pages/cart-checkout/cart-checkout.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CartCheckoutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
