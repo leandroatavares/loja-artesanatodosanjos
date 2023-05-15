@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, CartComponent],
   imports: [CommonModule, RouterModule, MatIconModule],
   exports: [HeaderComponent],
 })

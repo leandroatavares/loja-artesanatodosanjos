@@ -1,0 +1,18 @@
+.cart {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  gap: 6px;
+  cursor: pointer;
+  transition: all .25s;
+
+  &:hover {
+    background-color: darken($color: #a7c4d2, $amount: 5%);
+  }
+
+  & > * {
+    color: var(--white);
+  }
+}

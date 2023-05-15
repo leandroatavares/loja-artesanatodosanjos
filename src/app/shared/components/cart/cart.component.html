@@ -1,0 +1,9 @@
+<div class="cart">
+  <mat-icon
+    class="cart-icon material-icons-outlined"
+    aria-hidden="false"
+    aria-label="Example home icon"
+    fontIcon="shopping_cart"
+  ></mat-icon>
+  <p>{{ (cartItems$ | async)?.length }}</p>
+</div>

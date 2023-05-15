@@ -9,17 +9,7 @@
   <ng-template #loggedNav>
     <nav class="nav-right">
       <!-- <button (click)="logout()">logout</button> -->
-
-      <div class="nav-right__cart">
-        <mat-icon
-          class="cart-icon"
-          aria-hidden="false"
-          aria-label="Example home icon"
-          fontIcon="shopping_cart"
-        ></mat-icon>
-        {{ (cartItems$ | async)?.length }}
-      </div>
-
+      <app-cart></app-cart>
       <div class="nav-right__user"></div>
     </nav>
   </ng-template>
